@@ -1,5 +1,7 @@
 package pl.patryklubik.microserviceREST.data;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 
@@ -7,7 +9,8 @@ import javax.persistence.*;
  * Create by Patryk Łubik on 08.04.2021.
  */
 
-
+@Getter
+@Setter
 @Entity
 @Table(name = "data")
 public class Data {
@@ -26,22 +29,6 @@ public class Data {
 
     public Data(Integer id, String content) {
         this.id = id;
-        this.content = content;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public void setContent(String content) {
         this.content = content;
     }
 }
